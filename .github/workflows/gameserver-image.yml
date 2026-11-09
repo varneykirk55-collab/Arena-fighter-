@@ -37,7 +37,7 @@ jobs:
       gameplay_image: ${{ steps.receipt.outputs.gameplay_image }}
       source_revision: ${{ steps.checkout.outputs.source_revision }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           repository: Binoui/SlopArena
           ref: ${{ inputs.source_revision || github.sha }}
