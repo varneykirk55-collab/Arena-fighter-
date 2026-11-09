@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 10
     environment: playtest-vps
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
       - name: Bring up the private WireGuard peer

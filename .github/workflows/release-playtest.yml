@@ -48,7 +48,7 @@ jobs:
       master_revision: ${{ steps.source.outputs.master_revision }}
       migration_from: ${{ steps.source.outputs.migration_from }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Require configured main-only environments and VPS approval
         env:
           GH_TOKEN: ${{ github.token }}
@@ -116,7 +116,7 @@ jobs:
     timeout-minutes: 45
     environment: playtest-build
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.resolve.outputs.game_revision }}
       - uses: actions/download-artifact@v8
@@ -186,7 +186,7 @@ jobs:
     timeout-minutes: 100
     environment: playtest-vps
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.resolve.outputs.game_revision }}
       - uses: actions/download-artifact@v8
